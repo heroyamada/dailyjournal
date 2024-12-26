@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Login | My Daily Journal</title>
+        <title>Welcome to My Daily Journal</title>
         <link rel="icon" href="https://github.com/heroyamada/tugas_boostrap-js/blob/main/img/icon-finish.png?raw=true"
             type="image/x-icon">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
