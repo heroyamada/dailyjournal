@@ -83,10 +83,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     placeholder="Password" required />
                                 <div class="text-center my-3 d-grid">
                                     <button class="btn btn-danger rounded-4">Login</button><br>
-                                    <button class="btn btn-primary rounded-4">
-                                        <a href="UTS PRAKTIK.php" class="text-white text-decoration-none">Home</a>
-                                    </button>
                                 </div>
+                                <button class="btn btn-primary rounded-4">
+                                    <a href="index.php" class="text-white text-decoration-none">Home</a>
+                                </button>
                             </form>
                         </div>
                     </div>

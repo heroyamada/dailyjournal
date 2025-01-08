@@ -169,18 +169,29 @@ include "koneksi.php";
       <h1 class="fw-bold display-4 pb-3 text-center">Gallery</h1>
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner rounded-4">
-          <div class="carousel-item active">
-            <img src="https://github.com/heroyamada/tugas_boostrap-js/blob/main/img/clb1.jpeg?raw=true"
-              class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="https://github.com/heroyamada/tugas_boostrap-js/blob/main/img/clb2.jpeg?raw=true"
-              class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="https://github.com/heroyamada/tugas_boostrap-js/blob/main/img/clb3.jpeg?raw=true"
-              class="d-block w-100" alt="...">
-          </div>
+        <?php
+          // Query untuk mengambil data dari tabel gallery
+          $sql2 = "SELECT * FROM gallery ORDER BY tanggal DESC";
+          $hasil2 = $conn->query($sql2);
+
+          $active_class = "active"; // Kelas active untuk item pertama
+
+          if ($hasil2->num_rows > 0) {
+            while ($row = $hasil2->fetch_assoc()) {
+              $image_file = $row['gambar']; // Mengambil nama file dari kolom gambar
+              $image_url = "img/" . $image_file; // Gabungkan dengan path folder img
+              echo '
+                        <div class="carousel-item ' . $active_class . '">
+                            <img src="' . $image_url . '" class="d-block w-100" alt="Gallery Image" />
+                        </div>';
+              $active_class = ""; // Hapus kelas active untuk item berikutnya
+            }
+          } else {
+            echo '<div class="carousel-item active">
+                            <p>No images available in the gallery.</p>
+                        </div>';
+          }
+          ?>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>

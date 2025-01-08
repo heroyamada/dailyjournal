@@ -41,12 +41,19 @@ if (!isset($_SESSION['username'])) {
                     <li class="nav-item">
                         <a class="nav-link" href="admin.php?page=article">Article</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin.php?page=gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="index.php">Homepage</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-danger fw-bold" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <?= $_SESSION['username'] ?>
                         </a>
                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="profileadmin.php">Profile Admin</a></li>
                             <li><a class="dropdown-item" href="logout.php">Logout</a></li>
                         </ul>
                     </li>
@@ -77,9 +84,12 @@ if (!isset($_SESSION['username'])) {
     <!-- footer begin -->
     <footer id="footer" class="text-center py-5 bg-danger-subtle mt-auto">
         <div>
-            <a href="https://www.instagram.com/udinusofficial"><i class="bi bi-instagram h2 p-2 text-dark"></i></a>
-            <a href="https://twitter.com/udinusofficial"><i class="bi bi-twitter h2 p-2 text-dark"></i></a>
-            <a href="https://wa.me/+62812685577"><i class="bi bi-whatsapp h2 p-2 text-dark"></i></a>
+            <a href="https://www.instagram.com/heroo_yamada/" class="h2 p-2 text-dark"><i
+                    class="bi bi-instagram"></i></a>
+            <a href="https://www.twitter.com" class="h2 p-2 text-dark"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.whatsapp.com" class="h2 p-2 text-dark"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://www.tiktok.com/@ici.x.kiwir?is_from_webapp=1&sender_device=pc" class="h2 p-2 text-dark"><i
+                    class="bi bi-tiktok"></i></a>
         </div>
         <div>Yuda Fuji Hermansyah &copy; 2024</div>
     </footer>
