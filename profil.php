@@ -45,12 +45,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (!empty($new_password)) {
         // Update password if provided
-        $hashed_password = password_hash($new_password, PASSWORD_DEFAULT); // Securely hash the new password
+        $hashed_password = md5($new_password); // Hash the new password using MD5
         $query = "UPDATE user SET password = ? WHERE username = ?";
         $stmt = $conn->prepare($query);
         $stmt->bind_param("ss", $hashed_password, $_SESSION['username']);
         $stmt->execute();
     }
+
 
     if ($new_foto && $new_foto['error'] == 0) {
         // Process file upload
