@@ -95,7 +95,7 @@ include "koneksi.php";
             <a class="nav-link fw-bold" aria-current="page" href="#about-me">About me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-bold" aria-current="page" href="login.php" target="_blank">Login</a>
+            <a class="nav-link fw-bold" aria-current="page" href="login.php">Login</a>
           </li>
           <button id="darkbutton" class="btn btn-dark btn-sm-2" type="button">
             <i class="bi bi-moon-stars-fill"></i>
